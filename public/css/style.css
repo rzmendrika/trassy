@@ -1,0 +1,169 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    margin-bottom: 44px;
+}
+
+main {
+    flex: 1 0;
+}
+
+footer {
+    z-index: 2;
+}
+
+/* sidebar start */
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    transition: all 0.3s;
+    position: fixed;
+    height: 100%;
+    z-index: 2;
+    top: 44px;
+}
+
+#sidebar.active {
+    margin-left: 0;
+}
+
+#sidebar .list-group-item:not(:hover):not(.active) {
+    background-color: unset;
+    color: white;
+}
+
+#sidebar a {
+    padding-left: 8px;
+}
+
+#content {
+    transition: all 0.3s;
+}
+
+@media (max-width:992px) {
+    #sidebar {
+        margin-left: -200px;
+    }
+
+}
+@media(min-width:992px) {
+    #content {
+        padding-left: 200px;
+    }
+
+    #toogleSidenav {
+        display: none;
+    }
+}
+
+@media(min-width:992px) {
+    #toogleSidenav {
+        display: none;
+    }
+
+}
+
+/* sidebar end */
+.custom-col {
+    padding: 3px !important;
+}
+
+.custom-col .card, .custom-col .card a, .custom-col .card img {
+    height: 100%;
+}
+
+.bg-card {
+    background: #3516167a !important;
+    color: white;
+}
+
+.bg-card .card-header {
+    border-bottom-color: white;
+}
+
+table {
+    min-width: 485px !important;
+}
+
+@media(max-width:992px) {
+    .card-header span.hide-sm {
+        display: none;
+    }
+
+}
+
+#pic-parent .opac {
+    opacity: 0.3;
+}
+
+.pic-thumb {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background-color: #80808033;
+}
+
+.content-add label {
+    height: 100%;
+    width: 120px;
+}
+
+@media(max-width:576px) {
+    .pic-thumb {
+        width: 95px;
+        height: 95px;
+    }
+    .content-add label {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+.pic-thumb img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.pic-thumb .spinner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.pic-thumb button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+.form-card-body {
+    overflow-y: auto;
+    overflow-x: hidden; 
+    max-height: calc(100vh - 135px);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-indigo {
+    color: var(--indigo);
+}
+
+.text-pink {
+    color: var(--pink);
+}
